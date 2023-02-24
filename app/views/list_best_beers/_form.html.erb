@@ -1,0 +1,32 @@
+<%= form_with(model: list_best_beer) do |form| %>
+  <% if list_best_beer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(list_best_beer.errors.count, "error") %> prohibited this list_best_beer from being saved:</h2>
+
+      <ul>
+        <% list_best_beer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :text, style: "display: block" %>
+    <%= form.text_field :text %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

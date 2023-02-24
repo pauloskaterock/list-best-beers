@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @list_best_beer %>
+
+<div>
+  <%= link_to "Edit this list best beer", edit_list_best_beer_path(@list_best_beer) %> |
+  <%= link_to "Back to list best beers", list_best_beers_path %>
+
+  <%= button_to "Destroy this list best beer", @list_best_beer, method: :delete %>
+</div>

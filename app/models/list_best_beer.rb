@@ -1,0 +1,2 @@
+class ListBestBeer < ApplicationRecord
+end

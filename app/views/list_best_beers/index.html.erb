@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>List best beers</h1>
+
+<div id="list_best_beers">
+  <% @list_best_beers.each do |list_best_beer| %>
+    <%= render list_best_beer %>
+    <p>
+      <%= link_to "Show this list best beer", list_best_beer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New list best beer", new_list_best_beer_path %>
